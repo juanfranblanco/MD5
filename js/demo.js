@@ -7,6 +7,7 @@
     var input = document.getElementById('input');
     var salt = document.getElementById('salt');
     var times = document.getElementById('times');
+    var charNumber = document.getElementById('numberCharacters')
 
     document.getElementById('calculate').addEventListener(
         'click',
@@ -17,7 +18,7 @@
              current = md5(current + md5(salt.value));
             }
 
-            document.getElementById('result').value = current;
+            document.getElementById('result').value = current.substring(0, charNumber.value);
         }
     );
 
